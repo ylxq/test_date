@@ -6,9 +6,9 @@
 <mapper namespace="cn.com.tao.po.dateHandleMapper">
 
     <!-- 创建用户(Create) -->
-         <insert id="getDateHandle" parameterType="cn.com.tao.po.DateHandle">
-
-       </insert>
+         <select id="getDateHandle" resultType="cn.com.tao.po.DateHandle">
+          SELECT d.* from datehandle d WHERE d.isHandle=0  LIMIT 1
+       </select>
 
 
 </mapper>
